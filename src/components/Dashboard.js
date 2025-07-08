@@ -1,6 +1,13 @@
 "use client"
 
-import { Heart } from "lucide-react"
+import { Heart,Baby, FileText, Truck, Scan } from "lucide-react"
+
+const ICONS = {
+    Baby,
+    FileText,
+    Truck,
+    Scan,
+  }
 
 export default function Dashboard({ upcomingClass, activeClasses, studentStats }) {
   return (
@@ -41,7 +48,7 @@ export default function Dashboard({ upcomingClass, activeClasses, studentStats }
           <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Active Lesson</h3>
           <div className="space-y-4">
             {activeClasses.map((lesson) => {
-              const Icon = lesson.icon
+              const Icon = ICONS[lesson.icon] || Baby
               return (
                 <div key={lesson.id} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">

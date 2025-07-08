@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Menu } from "lucide-react"
+import Image from "next/image"
 
 export default function Header({ onMenuClick, showMobileLogo = false }) {
   const [user, setUser] = useState({})
@@ -44,9 +45,11 @@ export default function Header({ onMenuClick, showMobileLogo = false }) {
 
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
-            <img
-              src={user.avatar || "/placeholder.svg?height=40&width=40"}
+            <Image
+              src={user.avatar || "/images/me.jpg"}
               alt={user.name || "User"}
+              width={100}
+              height={100}
               className="w-full h-full object-cover"
             />
           </div>
