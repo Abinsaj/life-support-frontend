@@ -42,7 +42,11 @@ frontend/
     │   ├── Header.js
     │   ├── CreateLiveButton.js
     │   ├── CreateLiveModal.js
-    │   └── LiveList.js
+    │   ├── LiveList.js
+    │   ├── Dashboard.js
+    │   ├── Login.js
+    │   ├── Register.js
+    │   └── SideBarWrapper.js
     │
     └── services/
         ├── authService.js         # Login & Register API calls
