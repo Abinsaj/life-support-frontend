@@ -99,7 +99,7 @@ export default function Dashboard({ upcomingClass, activeClasses, studentStats }
                 </svg>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <p className="text-sm text-gray-600 mb-1">Total Student's</p>
+                  <p className="text-sm text-gray-600 mb-1">Total Students</p>
                   <p className="text-2xl lg:text-3xl font-bold text-gray-900">{studentStats.total} Peoples</p>
                 </div>
               </div>
