@@ -129,6 +129,15 @@ export default function RegisterForm() {
 
                     {error && <div className="text-red-500 text-sm text-center mt-4">{error}</div>}
 
+                    <div className="text-center mt-4">
+                        <span className="text-sm text-gray-600">
+                            Already have an account?{" "}
+                            <Link href="/register" className="text-blue-500 hover:underline">
+                                Register
+                            </Link>
+                        </span>
+                    </div>
+
                     <div className="text-center text-sm text-gray-400 mt-8">
                         <p>Powered by Duty Doctor</p>
                         <p>© 2025 life support learning. All rights reserved.</p>
