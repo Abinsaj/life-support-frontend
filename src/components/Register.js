@@ -52,7 +52,7 @@ export default function RegisterForm() {
                                 type="text"
                                 value={formData.fullName}
                                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600"
                                 required
                             />
                         </div>
@@ -64,7 +64,7 @@ export default function RegisterForm() {
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600 "
                                     required
                                 />
                                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -87,7 +87,7 @@ export default function RegisterForm() {
                                 type="tel"
                                 value={formData.mobileNumber}
                                 onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600"
                                 required
                             />
                         </div>
@@ -98,7 +98,7 @@ export default function RegisterForm() {
                                 type="password"
                                 value={formData.password}
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600"
                                 required
                             />
                         </div>
@@ -124,7 +124,7 @@ export default function RegisterForm() {
             <div className="hidden lg:flex flex-1 items-center justify-center bg-white relative overflow-hidden">
                 <div className="relative z-10 w-4/5 h-4/5 rounded-3xl overflow-hidden bg-white">
                     <Image
-                        src="/images/doctor2.jpg"
+                        src="/images/doctor1.jpg"
                         alt="Professional doctor with stethoscope"
                         fill
                         className="object-cover"

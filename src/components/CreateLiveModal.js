@@ -110,9 +110,9 @@ export default function CreateLiveModal({ onClose, onSubmit, loading, error }) {
                 type="text"
                 value={formData.liveName}
                 onChange={(e) => setFormData({ ...formData, liveName: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 text-gray-600"
                 required
-              />
+              /> 
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Instructors</label>
@@ -120,7 +120,7 @@ export default function CreateLiveModal({ onClose, onSubmit, loading, error }) {
                 type="text"
                 value={formData.instructors}
                 onChange={(e) => setFormData({ ...formData, instructors: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 text-gray-600"
                 required
               />
             </div>
@@ -134,7 +134,7 @@ export default function CreateLiveModal({ onClose, onSubmit, loading, error }) {
                 <select
                   value={formData.startTime}
                   onChange={(e) => setFormData({ ...formData, startTime: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 text-gray-600"
                   required
                 >
                   {timeOptions.map((option) => (
@@ -149,7 +149,7 @@ export default function CreateLiveModal({ onClose, onSubmit, loading, error }) {
                 <select
                   value={formData.endTime}
                   onChange={(e) => setFormData({ ...formData, endTime: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 text-gray-600"
                   required
                 >
                   {timeOptions.map((option) => (

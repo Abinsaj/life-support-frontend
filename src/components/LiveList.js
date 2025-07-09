@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { fetchLiveClassesByUser } from "@/services/liveClassService";
+import { Link } from "lucide-react";
 
 export default function LiveList() {
   const [liveClasses, setLiveClasses] = useState([]);
@@ -36,28 +37,16 @@ export default function LiveList() {
 
             <div className="absolute top-4 right-4 z-10">
               <div className="w-8 h-8 bg-white/40 backdrop-blur-md rounded-full flex items-center justify-center">
-                <svg
-                  className="w-4 h-4 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.102m0 0l4-4a4 4 0 105.656-5.656l-4 4m-1.102 1.102l-2.828-2.828"
-                  />
-                </svg>
+              <Link/>
               </div>
             </div>
 
             <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-md z-10">
               <h3 className="text-sm md:text-base font-semibold text-[#0E0E2C] mb-1">
-                {liveClass.title}
+                {liveClass.liveName}
               </h3>
               <p className="text-xs text-gray-500 mb-2">
-                Instructors: {liveClass.instructor.name}
+                Instructors: {liveClass.instructor}
               </p>
 
               {isActive ? (
