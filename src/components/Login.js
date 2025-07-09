@@ -38,7 +38,7 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-white flex">
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div className="mb-8">
@@ -144,16 +144,26 @@ export default function LoginForm() {
         </div>
       </div>
 
-      <div className="hidden lg:block flex-1 pl-2">
-        <div className="h-full bg-gradient-to-br  rounded-l-3xl flex items-center justify-center">
-        <Image
-            src="/images/doctor1.jpg" 
-            alt="Doctor illustration"
-            width={1000}
-            height={1200}
-            className="max-w-full max-h-full object-contain"
-            priority 
+      <div className="hidden lg:flex flex-1 items-center justify-center bg-white relative overflow-hidden">
+        <div className="relative z-10 w-4/5 h-4/5 rounded-3xl overflow-hidden bg-white">
+          <Image
+            src="/images/doctor1.jpg"
+            alt="Professional doctor with stethoscope"
+            fill
+            className="object-cover"
+            priority
           />
+
+          <div className="absolute w-28 h-28 z-20 ">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-white rounded-br-3xl">
+              <rect x="0" y="0" width="100" height="100" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 right-0 w-28 h-28 z-20">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-white rounded-tl-3xl">
+              <rect x="0" y="0" width="100" height="100" fill="currentColor" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
