@@ -6,6 +6,7 @@ import Image from "next/image"
 import { loginUser } from "@/services/authService"
 import { EyeOff, Eye } from "lucide-react"
 
+
 export default function LoginForm() {
     const [showPassword, setShowPassword] = useState(false)
     const [rememberMe, setRememberMe] = useState(false)
@@ -130,6 +131,15 @@ export default function LoginForm() {
                     </form>
 
                     {error && <div className="text-red-500 text-sm text-center mt-4">{error}</div>}
+
+                    <div className="text-center mt-4">
+                        <span className="text-sm text-gray-600">
+                            Don’t have an account?{" "}
+                            <Link href="/register" className="text-blue-500 hover:underline">
+                                Register
+                            </Link>
+                        </span>
+                    </div>
 
                     <div className="text-center text-sm text-gray-400 mt-8">
                         <p>Powered by Duty Doctor</p>
