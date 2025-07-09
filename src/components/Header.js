@@ -20,9 +20,7 @@ export default function Header({ onMenuClick, showMobileLogo = false }) {
 
   const handleLogout = async () => {
     await fetch("/api/logout", { method: "GET" })
-
     localStorage.clear()
-
     router.push("/")
   }
 

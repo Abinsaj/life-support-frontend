@@ -29,6 +29,7 @@ frontend/
     ├── app/
     │   ├── api/
     │   │   ├── login/route.js
+    │   │   ├── logout/route.js
     │   │   ├── register/route.js
     │   │   └── live-class/route.js
     │   ├── dashboard/page.js      # Dashboard page
@@ -75,13 +76,14 @@ CreateLiveButton.js – Opens the modal to add a new live class.
 CreateLiveModal.js – Modal form to create live classes.
 LiveList.js – Displays the list of live classes for the user.
 Sidebar.js – Navigation sidebar with routes.
-Header.js – Top bar with user info.
+Header.js – Top bar with user info an.
 
 ✨ How it works
 Users can register or login.
 Authenticated users see their dashboard.
 Users can view all live classes they have created.
 Users can create new live classes using the modal form.
+Onclicking User image in header logout and redirect to login page.
 
 📦 Scripts
 npm run dev – Run the app in development mode.
