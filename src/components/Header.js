@@ -3,25 +3,28 @@
 import { useEffect, useState } from "react"
 import { Menu } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function Header({ onMenuClick, showMobileLogo = false }) {
   const [user, setUser] = useState({})
+  const router = useRouter()
+
 
   useEffect(() => {
     const data = localStorage.getItem("user")
     if (data) {
       const parsed = JSON.parse(data)
       setUser(parsed)
-    } else {
-      const dummyUser = {
-        name: "Dr. Manmadhan Naros",
-        role: "Doctor",
-        avatar: "/placeholder.svg?height=40&width=40",
-        verified: true,
-      }
-      setUser(dummyUser)
-    }
+    } 
   }, [])
+
+  const handleLogout = async () => {
+    await fetch("/api/logout", { method: "GET" })
+
+    localStorage.clear()
+
+    router.push("/")
+  }
 
   return (
     <header className="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
@@ -43,7 +46,7 @@ export default function Header({ onMenuClick, showMobileLogo = false }) {
           <h1 className="text-2xl lg:text-3xl font-semibold text-gray-900">Dashboard</h1>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3" onClick={()=>handleLogout()}>
           <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
             <Image
               src={user.avatar || "/images/me.jpg"}

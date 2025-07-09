@@ -3,9 +3,11 @@
 import { useState } from "react"
 import Image from "next/image"
 import { registerUser } from "@/services/authService"
+import { Eye,EyeOff } from "lucide-react"
 
 export default function RegisterForm() {
     const [loading, setLoading] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState("")
     const [formData, setFormData] = useState({
         fullName: "",
@@ -21,7 +23,7 @@ export default function RegisterForm() {
 
         try {
             await registerUser(formData)
-            window.location.href = "/login"
+            window.location.href = "/"
         } catch (error) {
             console.error(error)
             setError(error.message || "Registration failed")
@@ -94,13 +96,26 @@ export default function RegisterForm() {
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                            <input
-                                type="password"
-                                value={formData.password}
-                                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600"
-                                required
-                            />
+                            <div className="relative">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    value={formData.password}
+                                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2"
+                                >
+                                    {showPassword ? (
+                                        <Eye className="w-5 h-5 text-gray-400" />
+                                    ) : (
+                                        <EyeOff className="w-5 h-5 text-gray-400" />
+                                    )}
+                                </button>
+                            </div>
                         </div>
 
                         <button
